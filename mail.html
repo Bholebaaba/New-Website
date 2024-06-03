@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>a</title>
+</head>
+<body>
+
+
+<p>down</p>
+
+<footer>
+    <div class="footer-content">
+        <!-- Social icons and other content -->
+    </div>
+    <div class="message-form">
+        <h3>Send a Message</h3>
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <input id="name" type="text" name="name" placeholder="Your Name" required>
+            <input id="email" type="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    <p>&copy; 2024 Subham's Website. All rights reserved.</p>
+</footer>
+
+<script>
+    function sendEmail(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        var subject = 'New Message from Website Footer';
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
+
+        var mailtoLink = 'mailto:contactme2subham@gmail.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+        window.location.href = mailtoLink;
+    }
+</script>
+</body>
+</html>
