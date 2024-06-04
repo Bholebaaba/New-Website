@@ -1,0 +1,269 @@
+    /* Basic Reset */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    /* Body Styling */
+    body {
+    font-family: Times new roman, Arial, sans-serif;
+    overflow-x: hidden;
+    background-color:#F4F4ED;
+    }
+    
+    /* Header Styling */
+    header {
+    background-color: #72DDF7;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    }
+    
+    /* Menu Icon Styling */
+    .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    }
+    
+    .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 1s ease;
+    }
+    
+    /* Main Content Styling */
+    main {
+    padding: 20px;
+    }
+    
+    /* Footer Styling */
+    
+    
+    /* Toggle Menu Styling */
+    .toggle-menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 250px;
+    height: 90%;
+    background-color: #8093F1;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: top 1s ease;
+    overflow-y: auto;
+    z-index: 1001;
+    }
+  
+    body.menu-open {
+    overflow: hidden;
+    }
+   
+    .toggle-menu.open {
+    top: 0;
+    }
+    
+    /* Ensure Submenus are Hidden Initially */
+    .submenu {
+    display: none;
+    }
+    
+    /* Arrow Styling */
+    .arrow {
+    float: right;
+    cursor: pointer;
+    }
+    
+    /* Submenu Styling */
+    .submenu {
+    display: none;
+    /*  list-style-type: none; */
+    padding-left: 20px;
+    }
+    
+    .submenu li {
+    margin: 10px 0;
+    }
+    
+    a {
+    text-decoration:none;
+    color:blue;
+    background-colr:#F7AEF8;
+    border-radius:2px;
+    }
+ 
+    .list {
+    margin-left: 10px;
+    }
+ 
+    #optn {
+    text-align:center;
+    background-color:#B388EB;
+    border:1px dotted black;
+    border-radius:5px;
+    padding:10px;
+    }
+    
+    /* Menu Icon Animation */
+    .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+    }
+    
+    .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* Overlay Styling */
+    #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+    }
+    
+    /* Responsive Styling */
+    @media (min-width: 768px) {
+    .toggle-menu {
+    width: 50%;
+    }
+    }
+    
+    /* Footer styling */
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:20px;
+    }
+    
+    .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    
+    .social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    }
+    
+    .social-icons img:hover {
+    transform: scale(1.1);
+    }
+    
+    .contact-form {
+    margin-top: 20px;
+    }
+    
+    .telegram-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .telegram-button:hover {
+    background-color: #005580;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    
+    
+    
+    
+    .welcome-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+    }
+    
+    .welcome-dialog h2 {
+    margin-top: 0;
+    color: #4CAF50;
+    }
+    
+    .welcome-dialog p {
+    font-size: 16px;
+    color: #555;
+    }
+    
+    .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    }
+    
+    .welcome-dialog button {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    }
+    
+    .welcome-dialog button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: linear-gradient(145deg, #6edb79, #4CAF50);
+    z-index: -1;
+    border-radius: 5px;
+    }
+    
+    .welcome-dialog button:hover {
+    background-color: #45a049;
+    }
+    
+    .welcome-dialog button:active {
+    top: 2px;
+    left: 2px;
+    }
